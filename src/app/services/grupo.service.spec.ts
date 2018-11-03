@@ -5,11 +5,12 @@ import { GrupoService } from './grupo.service';
 describe('GrupoService', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
-      providers: [GrupoService]
+      providers: [GrupoService],
     });
   });
 
   it('should be created', inject([GrupoService], (service: GrupoService) => {
     expect(service).toBeTruthy();
   }));
+
 });
