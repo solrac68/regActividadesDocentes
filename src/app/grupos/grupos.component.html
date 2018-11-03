@@ -1,19 +1,26 @@
 <div class = "container">
   <h2>Grupos</h2>
-  <a class="btn btn-primary" routerLink="/crear/new">Agregar nuevo grupo</a>
+  <!-- <a class="btn btn-primary" routerLink="/crear/new">Agregar nuevo grupo</a> -->
   <ul class="list-group">
     <ng-container *ngFor="let grupo of grupoList">
       <div class="row align-items-start">
         <div class="col-8">
           <li class="list-group-item">
-            <a routerLink="/crear/{{grupo.id}}"> <h3>{{grupo.nombre}}</h3> </a>
+            <a routerLink="/actividades/{{grupo.id}}"> <h3>{{grupo.nombre}}</h3> </a>
             <small>Número de estudiantes: {{grupo.cantidadestudiantes}}</small>
             <br/>
             <small>Periodo: {{grupo.anoSemestre}}-{{grupo.semestre?'Primer Semestre':'Segundo Semestre'}}</small>
             <br/>
             <small>Estado: {{grupo.estadoGrupo?'Activo':'Cerrado'}}</small>
             <br/>
-            <a class="fas fa-trash close" (click)="eliminarGrupo(grupo)">Eliminar</a>
+            <small>Fecha Inicio: {{grupo.fechaInicio}}</small>
+            <br/>
+            <small>Fecha Fin: {{grupo.fechaFin}}</small>
+            <br/>
+            <small>Hora Inicio clase: {{grupo.horainiclase}}</small>
+            <br/>
+            <small>Hora Fin clase: {{grupo.horafinclase}}</small>
+            <!-- <a class="fas fa-trash close" (click)="eliminarGrupo(grupo)">Eliminar</a> -->
             <br/>
           </li>
         </div>
