@@ -1,0 +1,27 @@
+<div class="alert alert-warning">
+  <a routerLink= "/grupos">Grupos</a>
+</div>
+<div class = "container">
+  <h2>Grupo: {{grupo.nombre}}</h2>
+  <h2>Total horas: {{suma}}</h2>
+  <a class="btn btn-primary" routerLink="/detalleActividadRegistrada/new">Nueva registro</a>
+  <br/>
+  <ul class="list-group">
+    <ng-container *ngFor="let actr of actividadesRegistradas">
+      <div class="row align-items-start">
+        <div class="col-8">
+          <li class="list-group-item">
+            <a routerLink="/detalleActividadRegistrada/{{actr.id}}"> <h3>Detalle</h3> </a>
+            <small>Fecha: {{actr.fecha}}</small>
+            <br/>
+            <small>Horas: {{actr.horas}}</small>
+            <br/>
+            <small>Actividad: {{actr.tipoActividad}}</small>
+            <a class="fas fa-trash close" (click)="eliminarActividadRegistrada(actr.id)">Eliminar</a>
+            <br/>
+          </li>
+        </div>
+      </div>
+    </ng-container> 
+  </ul>
+</div>

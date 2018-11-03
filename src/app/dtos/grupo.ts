@@ -3,10 +3,10 @@ export class Grupo {
     nombre: string;
     cantidadestudiantes:number;
     diaclase:string;
-    horainiclase:string;
-    horafinclase:string;
-    fechaInicio:string;
-    fechaFin:string;
+    horainiclase:Date;
+    horafinclase:Date;
+    fechaInicio:Date;
+    fechaFin:Date;
     estadoGrupo:boolean;
     nombreCurso:string;
     anoSemestre:number;

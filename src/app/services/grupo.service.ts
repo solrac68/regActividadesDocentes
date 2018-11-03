@@ -32,13 +32,17 @@ export class GrupoService{
 
   }
 
+  getGrupo(id:number):Observable<Grupo>{
+    const url = `${ApiService.API_URL_GET_GRUPO}/${id}`;
+    return this.http.get<Grupo>(url)
+    .pipe(
+        catchError(this.handleError<Grupo>('getGrupo'))
+    );
+  }
 
-//     /**
-//    * Handle Http operation that failed.
-//    * Let the app continue.
-//    * @param operation - name of the operation that failed
-//    * @param result - optional value to return as the observable result
-//    */
+
+
+
 private handleError<T> (operation = 'operation', result?: T) {
   return (error: any): Observable<T> => {
 
