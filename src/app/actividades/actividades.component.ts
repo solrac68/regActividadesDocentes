@@ -23,8 +23,12 @@ export class ActividadesComponent implements OnInit {
     private grupoService:GrupoService) { }
 
   ngOnInit() {
+    this.fetchData();
+  }
+
+  fetchData(){
     this.id = this.routeA.snapshot.params['id'];
-    
+
     this.registroactividadService.getRegistroActividadByGrupo(this.id)
       .subscribe(actividadesRegistradas => {
         this.actividadesRegistradas = actividadesRegistradas;
@@ -35,13 +39,13 @@ export class ActividadesComponent implements OnInit {
 
     this.registroactividadService.getSumaActividadesByGrupo(this.id)
       .subscribe(x => this.suma = x);
-    
-    
   }
 
   eliminarActividadRegistrada(id){
-    debugger;
-    this.registroactividadService.deleteRegistroActividad(id).subscribe();
+    this.registroactividadService.deleteRegistroActividad(id)
+    .subscribe(() => {
+      this.fetchData();
+    });
   }
 
 
