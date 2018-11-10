@@ -1,27 +1,35 @@
 <div class="alert alert-warning">
   <a routerLink= "/grupos">Grupos</a>
 </div>
-<div class = "container">
-  <h2>Grupo: {{grupo.nombre}}</h2>
-  <h2>Total horas: {{suma}}</h2>
-  <a class="btn btn-primary" routerLink="/detalleActividadRegistrada/new">Nueva registro</a>
-  <br/>
-  <ul class="list-group">
-    <ng-container *ngFor="let actr of actividadesRegistradas">
-      <div class="row align-items-start">
-        <div class="col-8">
-          <li class="list-group-item">
-            <a routerLink="/detalleActividadRegistrada/{{actr.id}}"> <h3>Detalle</h3> </a>
-            <small>Fecha: {{actr.fecha}}</small>
-            <br/>
-            <small>Horas: {{actr.horas}}</small>
-            <br/>
-            <small>Actividad: {{actr.tipoActividad}}</small>
-            <a class="fas fa-trash close" (click)="eliminarActividadRegistrada(actr.id)">Eliminar</a>
-            <br/>
-          </li>
-        </div>
-      </div>
-    </ng-container> 
-  </ul>
-</div>
+<h3>Grupo: {{grupo.nombre}}</h3>
+<table class="table table-hover table-bordered">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Fecha</th>
+      <th scope="col">Horas</th>
+      <th scope="col">Actividad</th>
+      <th scope="col"><i class="material-icons" >close</i></th>
+    </tr>
+  </thead>
+  <tbody>
+      <ng-container *ngFor="let actr of actividadesRegistradas">
+          <tr>
+            <th scope="row"><a routerLink="/detalleActividadRegistrada/{{actr.id}}"> <i class="material-icons">create</i> </a></th>
+            <td>{{actr.fecha}}</td>
+            <td>{{actr.horas}}</td>
+            <td>{{actr.tipoActividad}}</td>
+            <td>
+              <a (click)="eliminarActividadRegistrada(actr.id)"><i class="material-icons" >close</i></a>
+            </td>
+          </tr>
+      </ng-container>
+      <tr>
+        <th scope="row"><a routerLink="/detalleActividadRegistrada/new"><i class="material-icons">
+            fiber_new</i></a></th>
+        <td></td>    
+        <td><h4>{{suma}}</h4></td>
+        <td colspan="2"></td>
+      </tr>
+  </tbody>
+</table>

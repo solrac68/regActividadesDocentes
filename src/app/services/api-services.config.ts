@@ -7,5 +7,6 @@ export const ApiService: any = {
     API_URL_UPDATE_REGISTROACTIVIDADPORGRUPO: "http://localhost:8080/regactapi/reporteactividad/update",
     API_URL_SUMAHORAS_ACTIVIDADESPORGRUPO:"http://localhost:8080/regactapi/reporteactividad/sumHorasByGrupo/",
     API_URL_CREATE_ACTIVIDADESPORGRUPO:"http://localhost:8080/regactapi/reporteactividad/create/",
-    API_URL_GET_GRUPO:"http://localhost:8080/regactapi/grupos/get/"
+    API_URL_GET_GRUPO:"http://localhost:8080/regactapi/grupos/get/",
+    API_URL_GET_ACTIVIDAD:"http://localhost:8080/regactapi/actividad/getAll/"
 }
