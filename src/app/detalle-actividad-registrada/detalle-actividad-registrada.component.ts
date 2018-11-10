@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+
 @Component({
   selector: 'app-detalle-actividad-registrada',
   templateUrl: './detalle-actividad-registrada.component.html',
