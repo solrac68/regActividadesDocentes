@@ -9,7 +9,7 @@ const routes: Routes = [
   { path: '', redirectTo: '/grupos', pathMatch: 'full' },
   { path: 'grupos', component: GruposComponent },
   { path: 'actividades/:id', component: ActividadesComponent },
-  { path: 'detalleActividadRegistrada/:id', component: DetalleActividadRegistradaComponent }
+  { path: 'detalleActividadRegistrada/:id/:idGrupo', component: DetalleActividadRegistradaComponent }
 ];
 
 @NgModule({

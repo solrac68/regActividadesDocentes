@@ -12,7 +12,7 @@
   <tbody>
       <ng-container *ngFor="let actr of actividadesRegistradas">
           <tr>
-            <th scope="row"><a routerLink="/detalleActividadRegistrada/{{actr.id}}"> <i class="material-icons">create</i> </a></th>
+            <th scope="row"><a routerLink="/detalleActividadRegistrada/{{actr.id}}/{{idGrupo}}"> <i class="material-icons">create</i> </a></th>
             <td>{{actr.fecha}}</td>
             <td>{{actr.horas}}</td>
             <td>{{actr.tipoActividad}}</td>
@@ -22,7 +22,7 @@
           </tr>
       </ng-container>
       <tr>
-        <th scope="row"><a routerLink="/detalleActividadRegistrada/new"><i class="material-icons">
+        <th scope="row"><a routerLink="/detalleActividadRegistrada/new/{{idGrupo}}"><i class="material-icons">
             fiber_new</i></a></th>
         <td></td>    
         <td><h4>{{suma}}</h4></td>

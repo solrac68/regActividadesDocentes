@@ -1,5 +1,23 @@
-<mat-form-field>
-    <input matInput [matDatepicker]="picker" placeholder="Choose a date">
-    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-    <mat-datepicker #picker></mat-datepicker>
-</mat-form-field>
+
+<div class="alert alert-warning">
+        <a routerLink= "/actividades/{{idGrupo}}">Actividades</a>
+</div>
+
+<!-- <div class="card"> -->
+        <div class="card-body">
+                <h3>Actividades</h3>
+                <ul class="detalle-actividad-registrada">
+                        <li *ngFor="let act of actividades"
+                        [class.selected]="act === selectedActividad"
+                        (click)="onSelect(act)">
+                        <span class="badge">{{act.id}}</span> {{act.descripcion}}
+                        </li>
+                </ul>
+                <mat-form-field>
+                                <input matInput [matDatepicker]="picker" placeholder="Seleccione una fecha">
+                                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                                <mat-datepicker #picker></mat-datepicker>
+                </mat-form-field>
+        </div>   
+<!-- </div> -->
+

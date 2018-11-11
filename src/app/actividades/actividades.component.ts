@@ -12,7 +12,7 @@ import {Grupo} from '../dtos/grupo';
   styleUrls: ['./actividades.component.css']
 })
 export class ActividadesComponent implements OnInit {
-  id:any = null;
+  idGrupo:any = null;
   actividadesRegistradas:ActividadRegistrada[];
   grupo:Grupo;
   suma:any;
@@ -27,17 +27,17 @@ export class ActividadesComponent implements OnInit {
   }
 
   fetchData(){
-    this.id = this.routeA.snapshot.params['id'];
+    this.idGrupo = this.routeA.snapshot.params['id'];
 
-    this.registroactividadService.getRegistroActividadByGrupo(this.id)
+    this.registroactividadService.getRegistroActividadByGrupo(this.idGrupo)
       .subscribe(actividadesRegistradas => {
         this.actividadesRegistradas = actividadesRegistradas;
       });
     
-    this.grupoService.getGrupo(this.id)
+    this.grupoService.getGrupo(this.idGrupo)
       .subscribe(grupo => this.grupo = grupo);
 
-    this.registroactividadService.getSumaActividadesByGrupo(this.id)
+    this.registroactividadService.getSumaActividadesByGrupo(this.idGrupo)
       .subscribe(x => this.suma = x);
   }
 

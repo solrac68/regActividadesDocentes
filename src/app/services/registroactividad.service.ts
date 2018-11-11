@@ -24,18 +24,43 @@ export class RegistroactividadService {
   }
 
   deleteRegistroActividad (id: number): Observable<ActividadRegistrada> {
-    const url = `${ApiService.API_URL_DELETE_REGISTROACTIVIDADPORGRUPO}/${id}`;
+    const url = `${ApiService.API_URL_DELETE_REGISTROACTIVIDAD}/${id}`;
 
     return this.http.delete<ActividadRegistrada>(url, httpOptions).pipe(
       catchError(this.handleError<ActividadRegistrada>('deleteRegistroActividadByGrupo'))
     );
   }
 
+  addRegistroActividad (actividadRegistrada: ActividadRegistrada): Observable<ActividadRegistrada> {
+    const url = `${ApiService.API_URL_INSERT_REGISTROACTIVIDAD}`;
+
+    return this.http.post<ActividadRegistrada>(url,actividadRegistrada,httpOptions).pipe(
+      catchError(this.handleError<ActividadRegistrada>('addRegistroActividadByGrupo'))
+    );
+  }
+
+  updateRegistroActividad (actividadRegistrada: ActividadRegistrada): Observable<ActividadRegistrada> {
+    const url = `${ApiService.API_URL_UPDATE_REGISTROACTIVIDAD}`;
+
+    return this.http.put<ActividadRegistrada>(url,actividadRegistrada, httpOptions).pipe(
+      catchError(this.handleError<ActividadRegistrada>('updateRegistroActividad'))
+    );
+  }
+
+
   getSumaActividadesByGrupo(id:number):Observable<any>{
     const url = `${ApiService.API_URL_SUMAHORAS_ACTIVIDADESPORGRUPO}/${id}`;
     return this.http.get<any>(url)
     .pipe(
         catchError(this.handleError('getSumaActividadesByGrupo'))
+    );
+  }
+
+  getRegistroActividad(id:number):Observable<ActividadRegistrada>{
+    const url = `${ApiService.API_URL_GET_REGISTROACTIVIDAD}/${id}`;
+    return this.http.get<ActividadRegistrada>(url)
+    .pipe(
+        catchError(this.handleError<ActividadRegistrada>('getRegistroActividadBy'))
     );
   }
 
