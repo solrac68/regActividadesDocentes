@@ -5,6 +5,8 @@ import {RegistroactividadService} from '../services/registroactividad.service';
 import {ActividadRegistrada} from '../dtos/actividadRegistrada';
 import {Actividad} from '../dtos/actividad';
 import { Router } from '@angular/router';
+import { Location } from '@angular/common';
+import { isNull } from 'util';
 
 
 @Component({
@@ -19,6 +21,8 @@ export class DetalleActividadRegistradaComponent implements OnInit {
   selectedActividad:Actividad;
   id:any = null;
   idGrupo:any = null;
+  error:Boolean = false;
+  validation:String;
 
   fetchData(){
     this.id = this.routeA.snapshot.params['id'];
@@ -61,26 +65,49 @@ export class DetalleActividadRegistradaComponent implements OnInit {
     
   }
 
+  validate():Boolean{
+    let retorno:Boolean = true;
+    this.validation = "";
+    if (typeof this.actRegistrada.fecha === 'undefined' || this.actRegistrada.fecha == null) {
+      this.validation = "<fecha>";
+      this.error = true;
+      retorno = false;
+    }
+    if (typeof this.actRegistrada.horas === 'undefined' || this.actRegistrada.horas === null || this.actRegistrada.horas == 0) {
+      this.validation += "<duración>";
+      this.error = true;
+      retorno = false;
+    }
+    
+    return retorno;
+  }
+
+  goBack(): void {
+    this.location.back();
+  }
+
   guardarRegistro(){
     //debugger;
+    if(!this.validate()){
+      return;
+    }
     if(this.id == 'new'){
-      //this.actRegistrada.id = Date.now();
       this.actRegistrada.idGrupo = this.idGrupo;
       this.registroactividadService.addRegistroActividad(this.actRegistrada)
-      .subscribe(actr => this.actRegistrada = actr)
+      .subscribe(actr => {this.actRegistrada = actr; this.goBack();})
     }
     else{
       this.registroactividadService.updateRegistroActividad(this.actRegistrada)
-      .subscribe(actr => this.actRegistrada = actr);
+      .subscribe(actr => {this.actRegistrada = actr; this.goBack();});
     }
-    this.route.navigate([`/actividades/${this.idGrupo}`]);
   }
 
   constructor(
     private routeA:ActivatedRoute, 
     private actividadService:ActividadService,
     private registroactividadService:RegistroactividadService,
-    private route:Router) { }
+    private route:Router,
+    private location: Location) { }
 
   ngOnInit() {
     this.fetchData();
