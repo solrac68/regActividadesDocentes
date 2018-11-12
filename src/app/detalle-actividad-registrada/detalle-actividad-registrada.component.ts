@@ -14,7 +14,7 @@ import { Router } from '@angular/router';
 })
 export class DetalleActividadRegistradaComponent implements OnInit {
 
-  actRegistrada:ActividadRegistrada;
+  actRegistrada:ActividadRegistrada = new ActividadRegistrada();
   actividades:Actividad[];
   selectedActividad:Actividad;
   id:any = null;
@@ -46,24 +46,34 @@ export class DetalleActividadRegistradaComponent implements OnInit {
         this.selectedActividad = this.actividades.find(act => act.id == this.actRegistrada.idActividad);
         console.log("selectedActividad :" + this.selectedActividad.descripcion);
       }
+      else{
+        this.actRegistrada.fecha = new Date();
+        this.actRegistrada.idActividad = 2
+        this.selectedActividad = this.actividades.find(act => act.id == this.actRegistrada.idActividad);
+        this.actRegistrada.tipoActividad = this.selectedActividad.descripcion;
+      }
     });
   }
 
   onSelect(actividad:Actividad){
     this.selectedActividad = actividad;
     this.actRegistrada.idActividad = this.selectedActividad.id;
+    
   }
 
   guardarRegistro(){
+    //debugger;
     if(this.id == 'new'){
+      //this.actRegistrada.id = Date.now();
+      this.actRegistrada.idGrupo = this.idGrupo;
       this.registroactividadService.addRegistroActividad(this.actRegistrada)
       .subscribe(actr => this.actRegistrada = actr)
     }
     else{
       this.registroactividadService.updateRegistroActividad(this.actRegistrada)
-      .subscribe(actr => this.actRegistrada = actr)
+      .subscribe(actr => this.actRegistrada = actr);
     }
-    this.route.navigate([`/actividades/${this.actRegistrada.idGrupo}`]);
+    this.route.navigate([`/actividades/${this.idGrupo}`]);
   }
 
   constructor(

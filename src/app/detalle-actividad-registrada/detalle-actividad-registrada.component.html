@@ -1,9 +1,4 @@
-
-<div class="alert alert-warning">
-        <a routerLink= "/actividades/{{idGrupo}}">Actividades</a>
-</div>
-
-<!-- <div class="card"> -->
+<div class="card" width="50">
         <div class="card-body">
                 <h3>Actividades</h3>
                 <ul class="detalle-actividad-registrada">
@@ -14,10 +9,19 @@
                         </li>
                 </ul>
                 <mat-form-field>
-                                <input matInput [matDatepicker]="picker" placeholder="Seleccione una fecha">
+                                <input matInput [matDatepicker]="picker" placeholder="Seleccione una fecha" [(ngModel)]="actRegistrada.fecha">
                                 <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
                                 <mat-datepicker #picker></mat-datepicker>
                 </mat-form-field>
+                <br>
+                <label>Horas</label>
+                <input type="number" class="form-control" required [(ngModel)]="actRegistrada.horas"/>
+                <br>
+                <label>Observaciones</label>
+                <input type="text" maxlength="150" class="form-control" required [(ngModel)]="actRegistrada.observaciones"/>
+                <br>
+                <a class="btn btn-dark" (click)="guardarRegistro()">Enviar</a>
+                <a class="btn btn-secondary" routerLink="/actividades/{{idGrupo}}">Cancelar</a>
         </div>   
-<!-- </div> -->
+</div>
 
