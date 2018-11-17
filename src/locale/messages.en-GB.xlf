@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="436682834a86a8592b957c4a88de6c8b63da8b7e" datatype="html">
+        <source>Registro de Actividades</source>
+        <target>Activity Logs</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/app.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="fdc949785d462603cd81bfc25c7f9dfd869dd568" datatype="html">
+        <source>Grupos</source>
+        <target>Groups</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/app.component.html</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="03d7c29fc02bd39043b7388af3448ed96b041ca8" datatype="html">
+        <source>Menu 2</source>
+        <target>Menu 2</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/app.component.html</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="882937d45e7ff664bb9f85f78323559b27063859" datatype="html">
+        <source>Menu 3</source>
+        <target>Menu 3</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/app.component.html</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="34a5f2777ac604fa7f4165a4d8fa4a1a2152d843" datatype="html">
+        <source>Menu 4</source>
+        <target>Menu 4</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/app.component.html</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="75a53a84808543d1a5de844c2d5b9fe5feb7b9f5" datatype="html">
+        <source>Número de Estudiantes:</source>
+        <target>Number of Students:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/grupos/grupos.component.html</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8b381de38fbaa8df78d57bdee4f64dbb70d8681f" datatype="html">
+        <source>Periodo:</source>
+        <target>Term:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/grupos/grupos.component.html</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6af459f444da8b576f25fc9727b913ed7e6aea51" datatype="html">
+        <source>Estado:</source>
+        <target>Status:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/grupos/grupos.component.html</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="15075322560d360e6f581346b829f4da06f0e426" datatype="html">
+        <source>Fecha Inicio:</source>
+        <target>Starting Date:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/grupos/grupos.component.html</context>
+          <context context-type="linenumber">28</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="89e8a835930987b8446fa21cb37e239f73c41b7f" datatype="html">
+        <source>Fecha Fin:</source>
+        <target>Closing Date:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/grupos/grupos.component.html</context>
+          <context context-type="linenumber">33</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="e65f6a692b253f04d668b0436c0960f1e1bd92bd" datatype="html">
+        <source>Hora Inicio Clases:</source>
+        <target>Starting Time:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/grupos/grupos.component.html</context>
+          <context context-type="linenumber">38</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="57873a8f2d7038dbec861a614a2b4689c0335e76" datatype="html">
+        <source>Hora Fin Clases:</source>
+        <target>Ending Time:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/grupos/grupos.component.html</context>
+          <context context-type="linenumber">43</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="b173ec5192470d6b2da768338bc24a965d7e001c" datatype="html">
+        <source>Fecha</source>
+        <target>Date</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/actividades/actividades.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="afd70067bd83f50ac4b4b16963a93e3a5c43fea1" datatype="html">
+        <source>Horas</source>
+        <target>Hours</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/actividades/actividades.component.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8bdfe463ccbcf8fddced437c7fbadf543a2ed6c3" datatype="html">
+        <source>Actividad</source>
+        <target>Activity</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/actividades/actividades.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="c04598d2def1d9a8d5c77cdbfeb0a013114b96f0" datatype="html">
+        <source>Faltan campos por diligenciar</source>
+        <target>Some fields are missing</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/detalle-actividad-registrada/detalle-actividad-registrada.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="eed17eb19564c392eef398c2003def5b6f8a8398" datatype="html">
+        <source>Actividades</source>
+        <target>Activities</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/detalle-actividad-registrada/detalle-actividad-registrada.component.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="0bb36050069d78aa91aeae91e210c3e0cd0d1644" datatype="html">
+        <source>Fechas</source>
+        <target>Dates</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/detalle-actividad-registrada/detalle-actividad-registrada.component.html</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="c4f571f45e9946cf149b57026eb1dd332a00125c" datatype="html">
+        <source>Duración actividad *</source>
+        <target>Activity Duration *</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/detalle-actividad-registrada/detalle-actividad-registrada.component.html</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="383d678c82d870e7516812270222a8c44b9e5623" datatype="html">
+        <source>Observaciones (Opcional)</source>
+        <target>Observations (Optional)</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/detalle-actividad-registrada/detalle-actividad-registrada.component.html</context>
+          <context context-type="linenumber">27</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="01de17158ec5ff25baf3c6ffa9fc3375a25e0c6d" datatype="html">
+        <source>Enviar</source>
+        <target>Send</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/detalle-actividad-registrada/detalle-actividad-registrada.component.html</context>
+          <context context-type="linenumber">30</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="e8d22cdef9f5780e31395340125d873f9df518c3" datatype="html">
+        <source>Cancelar</source>
+        <target>Cancel</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/detalle-actividad-registrada/detalle-actividad-registrada.component.html</context>
+          <context context-type="linenumber">31</context>
+        </context-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

@@ -9,6 +9,12 @@ import { HttpClientModule }    from '@angular/common/http';
 import { ActividadesComponent } from './actividades/actividades.component';
 import { DetalleActividadRegistradaComponent } from './detalle-actividad-registrada/detalle-actividad-registrada.component';
 
+// import { registerLocaleData } from '@angular/common';
+// import localeEn from '@angular/common/locales/en';
+
+
+// registerLocaleData(localeEn, 'en-GB');
+
 import {
   MatAutocompleteModule,
   MatBadgeModule,

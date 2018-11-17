@@ -1,10 +1,10 @@
 <div class="card" width="50">
         <div class="alert alert-primary" role="alert" *ngIf="error==true">
-                <h3>Falta campos por diligenciar</h3>
+                <h3 i18n>Faltan campos por diligenciar</h3>
                 <h4>{{validation}}</h4>                  
         </div>
         <div class="card-body">
-                <h3>Actividades</h3>
+                <h3 i18n>Actividades</h3>
                 <ul class="detalle-actividad-registrada">
                         <li *ngFor="let act of actividades"
                         [class.selected]="act === selectedActividad"
@@ -17,18 +17,18 @@
                                 <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
                                 <mat-datepicker #picker></mat-datepicker>
                 </mat-form-field>
-                <label>Fechas</label>
+                <label i18n>Fechas</label>
                 <!-- <br>
                 <input type="date" class="form-control" required placeholder="Seleccione una fecha" required [(ngModel)]="actRegistrada.fecha"/> -->
                 <br>
-                <label>Duración actividad *</label>
+                <label i18n>Duración actividad *</label>
                 <input type="number" class="form-control" required [(ngModel)]="actRegistrada.horas"/>
                 <br>
-                <label>Observaciones (Opcional)</label>
+                <label i18n>Observaciones (Opcional)</label>
                 <input type="text" maxlength="150" class="form-control" required [(ngModel)]="actRegistrada.observaciones"/>
                 <br>
-                <a class="btn btn-dark" (click)="guardarRegistro()">Enviar</a>
-                <a class="btn btn-secondary" routerLink="/actividades/{{idGrupo}}">Cancelar</a>
+                <a class="btn btn-dark" (click)="guardarRegistro()" i18n>Enviar</a>
+                <a class="btn btn-secondary" routerLink="/actividades/{{idGrupo}}" i18n>Cancelar</a>
         </div>   
 </div>
 

@@ -1,6 +1,6 @@
 
 <!-- <div class = "container"> -->
-  <h2>Grupos</h2>
+  <h2 i18n>Grupos</h2>
   <!-- <a class="btn btn-primary" routerLink="/crear/new">Agregar nuevo grupo</a> -->
   <ul class="list-group">
     <ng-container *ngFor="let grupo of grupoList">
@@ -10,37 +10,37 @@
             <a routerLink="/actividades/{{grupo.id}}"> <h3>{{grupo.nombre}}</h3> </a>
             <table width="30%" style="font-size:12.8px;">         
               <tr>
-                <td>Número de Estudiantes:</td>
+                <td i18n>Número de Estudiantes:</td>
                 <td>{{grupo.cantidadestudiantes}}</td>
               </tr>
             
               <tr>
-                <td>Periodo:</td>
+                <td i18n>Periodo:</td>
                 <td>{{grupo.anoSemestre}}-{{grupo.semestre?'1':'2'}}</td>
               </tr>
               
               <tr>
-                <td>Estado:</td>
+                <td i18n>Estado:</td>
                 <td>{{grupo.estadoGrupo?'Activo':'Cerrado'}}</td>
               </tr>
 
               <tr>
-                <td>Fecha Inicio:</td>  
+                <td i18n>Fecha Inicio:</td>  
                 <td>{{grupo.fechaInicio}}</td>  
               </tr>
 
               <tr>
-                <td>Fecha Fin:</td>  
+                <td i18n>Fecha Fin:</td>  
                 <td>{{grupo.fechaFin}}</td>  
               </tr>
 
               <tr>
-                <td>Hora Inicio Clases:</td>  
+                <td i18n>Hora Inicio Clases:</td>  
                 <td>{{grupo.horainiclase}}</td>  
               </tr>
 
               <tr>
-                <td>Hora Fin Clases:</td>  
+                <td i18n>Hora Fin Clases:</td>  
                 <td>{{grupo.horafinclase}}</td>  
               </tr>
             
